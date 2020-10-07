@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams 
 import Navbar from './Navbar';
 import Filter from './Filter';
 import Stock from './Stock';
-import Dashboard from "./Dash";
+import Dashboard from "../containers/Dashboard";
 
 const App = () => {
   return (
@@ -12,9 +12,10 @@ const App = () => {
       <div>
         <Navbar></Navbar>
         <Dashboard></Dashboard>
+        <Filter></Filter>
 
         <Switch>
-          <Route path="/stocks" exact component={Filter} />
+          <Route path="/dashboard" exact component={Dashboard} />
           <Route path="/stocks/:stock" component={Stock} />
         </Switch>
       </div>

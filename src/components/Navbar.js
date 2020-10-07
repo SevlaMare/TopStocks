@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types';
 
 const Navbar = () => {
   return (
     <nav className="flex">
-      <a>DashBoard</a>
-      <a>Details</a>
+      <Link to="/">DashBoard</Link>
+      <Link to="/stocks">Stocks</Link>
     </nav>
   )
 }

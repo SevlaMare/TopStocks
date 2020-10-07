@@ -1,7 +1,11 @@
 import React from "react";
 
 const Filter = () => {
-  return <h2>FILTER HERE</h2>;
+  return (
+    <div className="filter">
+      <h3>Filter Select</h3>
+    </div>
+  );
 }
 
 export default Filter;

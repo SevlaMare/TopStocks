@@ -8,6 +8,8 @@ import App from './components/App';
 
 import './css/style.css';
 import './css/navbar.css';
+import './css/filter.css';
+import './css/stock.css';
 
 // const store = createStore(rootReducer);
 
@@ -24,6 +26,7 @@ const data = 'AAPL,GOOG,FB'
 
 // last 5 days
 const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${data}?timeseries=5&apikey=${hash}`
+
 
 // ----- on details display all closes --------
 // getData(url).then((data) => {
