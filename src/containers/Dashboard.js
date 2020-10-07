@@ -2,7 +2,6 @@ import React from "react";
 // import PropTypes from 'prop-types';
 
 import Stock from '../components/Stock'
-import Detail from '../components/Detail'
 
 const fetchedData = [
   {
@@ -52,8 +51,6 @@ const Dashboard = () => {
         >
         </Stock>
       ))}
-
-      <Detail></Detail>
     </>
   );
 }

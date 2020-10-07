@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav className="flex">
-      <Link to="/">DashBoard</Link>
-      <Link to="/stocks">Stocks</Link>
+      <Link to="/">Home</Link>
+      <Link to="/dashboard">DashBoard</Link>
+      <Link to="/detail">Detail</Link>
     </nav>
   )
 }
