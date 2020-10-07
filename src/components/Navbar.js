@@ -1,7 +1,12 @@
 import React from "react";
 
 const Navbar = () => {
-  return <h2>navbar ehr</h2>;
+  return (
+    <nav className="flex">
+      <a>DashBoard</a>
+      <a>Details</a>
+    </nav>
+  )
 }
 
 export default Navbar;

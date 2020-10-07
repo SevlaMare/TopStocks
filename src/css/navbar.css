@@ -1,0 +1,12 @@
+nav {
+  background: #345;
+}
+
+a {
+  padding: 15px;
+  margin-right: 15px;
+  font-family: "Gill Sans", sans-serif;
+  /* font-weight: 700; */
+  color: #fff;
+  background: #456;
+}
