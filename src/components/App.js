@@ -5,18 +5,20 @@ import Navbar from './Navbar';
 import Filter from './Filter';
 import Stock from './Stock';
 import Dashboard from "../containers/Dashboard";
-import Detail from '../components/Detail'
+import Detail from './Detail'
+
+function Home() { return <h1>Home</h1>; }
 
 const App = () => {
   return (
     <Router>
       <div>
         <Navbar></Navbar>
-        <h1>Home</h1>
 
         <Switch>
-          <Route path="/dashboard" exact component={Dashboard} />
-          <Route path="/detail" exact component={Detail} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/detail" component={Detail} />
         </Switch>
       </div>
     </Router>

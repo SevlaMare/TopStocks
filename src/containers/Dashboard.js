@@ -40,16 +40,28 @@ const fetchedData = [
   },
 ]
 
+import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom";
+
 const Dashboard = () => {
+  // let match = useRouteMatch();
+
   return (
     <>
-      { fetchedData.map(data => (
-        <Stock key={data.id}
-          title={data.symbol}
-          close={data.historical[0].close}
-          change={data.historical[0].changePercent}
-        >
-        </Stock>
+      { fetchedData.map( (data,idx) => (
+        <>
+          <Link to={`/detail/${idx}`}>Google</Link>
+
+          <Switch>
+            <Route path={`/detail/${idx}`}>
+              <Stock key={data.id}
+                title={data.symbol}
+                close={data.historical[0].close}
+                change={data.historical[0].changePercent}
+              >
+              </Stock>
+            </Route>
+          </Switch>
+        </>
       ))}
     </>
   );

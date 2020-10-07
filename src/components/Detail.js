@@ -38,7 +38,7 @@ const fetchedData = [
 ]
 
 const Detail = props => {
-  // const { title, close, change } = props
+  const { company } = props
 
   return (
     <div className="stock">
