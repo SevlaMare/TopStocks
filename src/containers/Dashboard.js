@@ -1,7 +1,8 @@
 import React from "react";
 // import PropTypes from 'prop-types';
 
-import Stock from '../components/Stock'
+import Stock from '../components/Stock';
+import Detail from '../components/Detail';
 
 const fetchedData = [
   {
@@ -40,26 +41,27 @@ const fetchedData = [
   },
 ]
 
-import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link,
+  useRouteMatch, useParams } from "react-router-dom";
 
 const Dashboard = () => {
-  // let match = useRouteMatch();
+  let { path, url, match } = useRouteMatch();
 
   return (
     <>
-      { fetchedData.map( (data,idx) => (
+      { fetchedData.map( (data, idx) => (
         <>
-          <Link to={`/detail/${idx}`}>Google</Link>
+          <Stock key={data.id}
+            title={data.symbol}
+            close={data.historical[0].close}
+            change={data.historical[0].changePercent}
+          />
+
+          <Link to={`/detail/${idx}`}>Google link</Link>
 
           <Switch>
-            <Route path={`/detail/${idx}`}>
-              <Stock key={data.id}
-                title={data.symbol}
-                close={data.historical[0].close}
-                change={data.historical[0].changePercent}
-              >
-              </Stock>
-            </Route>
+            <Route exact path="/detail/:stockid"
+              component={Detail} />
           </Switch>
         </>
       ))}
