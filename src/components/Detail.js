@@ -1,8 +1,4 @@
 import React from "react";
-// import PropTypes from 'prop-types';
-
-import Stock from '../components/Stock'
-import Detail from '../components/Detail'
 
 const fetchedData = [
   {
@@ -41,21 +37,33 @@ const fetchedData = [
   },
 ]
 
-const Dashboard = () => {
-  return (
-    <>
-      { fetchedData.map(data => (
-        <Stock key={data.id}
-          title={data.symbol}
-          close={data.historical[0].close}
-          change={data.historical[0].changePercent}
-        >
-        </Stock>
-      ))}
+const Detail = props => {
+  // const { title, close, change } = props
 
-      <Detail></Detail>
-    </>
+  return (
+    <div className="stock">
+      { fetchedData.map(data => {
+        return (
+          <div className='detail'>
+            <p>{data.symbol}</p>
+            <hr></hr>
+
+            {
+              data.historical.map(item => {
+                return (
+                  <div>
+                    <p>Date {item.date}</p>
+                    <p>{item.close} </p>
+                    <p>{item.changePercent} </p>
+                  </div>
+                )
+              })
+            }
+          </div>
+         )})
+        }
+    </div>
   );
 }
 
-export default Dashboard;
+export default Detail;

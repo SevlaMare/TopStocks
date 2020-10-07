@@ -10,6 +10,7 @@ import './css/style.css';
 import './css/navbar.css';
 import './css/filter.css';
 import './css/stock.css';
+import './css/detail.css';
 
 // const store = createStore(rootReducer);
 
