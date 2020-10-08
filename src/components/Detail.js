@@ -39,13 +39,9 @@ const fetchedData = [
   },
 ]
 
-const Detail = props => {
-  const { stockid } = props;
-
+const Detail = () => {
   return (
-    <div className="stock">
-      <h3>Requested stock ID: {stockid}</h3>
-    </div>
+    <h3>Requested stock ID</h3>
   );
 }
 

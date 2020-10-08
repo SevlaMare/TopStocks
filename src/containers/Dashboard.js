@@ -2,7 +2,7 @@ import React from "react";
 // import PropTypes from 'prop-types';
 
 import Stock from '../components/Stock';
-import Detail from '../components/Detail';
+// import Detail from '../components/Detail';
 
 const fetchedData = [
   {
@@ -41,21 +41,44 @@ const fetchedData = [
   },
 ]
 
-import { BrowserRouter as Router, Switch, Route, Link,
-  useRouteMatch, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-const Dashboard = () => {
-  let isaa = 'isaa'
+const Detail = () => {
+  // const stock = fetchedData.find(
+  //   ({ symbol }) => symbol === match.params.stockId
+  // )
 
   return (
     <div>
+      <h3>Requested stock ID</h3>
+    </div>
+  );
+}
+
+const Dashboard = ({ match }) => {
+  console.log('SEE THIS', match)
+
+  return (
+    <div>
+      <p>ON DASH DASH</p>
       <ul>
-        { fetchedData.map( ({ data, symbol }) => (
+        { fetchedData.map( ({ stockData, symbol }) => (
           <li key={symbol}>
-            <Link to={`/dashboard/${symbol}`}>{symbol}</Link>
+            <Link to={`${match.url}/${symbol}`}>{symbol}</Link>
           </li>
         ))}
       </ul>
+
+      {/* <Route
+        path={`/${match.url}/:stockId`}
+        render={ (props) => <Detail data={fetchedData} {...props} />}
+      /> */}
+
+      <Route
+        path="/dashboard/:stockId"
+        render={ (props) => <Detail {...props}
+        data={fetchedData}/>}
+      />
     </div>
   )
 }
