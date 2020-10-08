@@ -45,27 +45,19 @@ import { BrowserRouter as Router, Switch, Route, Link,
   useRouteMatch, useParams } from "react-router-dom";
 
 const Dashboard = () => {
-
+  let isaa = 'isaa'
 
   return (
-    <>
-      { fetchedData.map( (data, symbol) => (
-        <>
-          <Stock key={data.id}
-            title={data.symbol}
-            close={data.historical[0].close}
-            change={data.historical[0].changePercent}
-          />
-
-          <Link to={`/detail/${stockid}`}>Google link</Link>
-
-          <Switch>
-            <Route path="/detail/:stockid" component={Detail} />
-          </Switch>
-        </>
-      ))}
-    </>
-  );
+    <div>
+      <ul>
+        { fetchedData.map( ({ data, symbol }) => (
+          <li key={symbol}>
+            <Link to={`/dashboard/${symbol}`}>{symbol}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default Dashboard;
