@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import Stock from '../components/Stock';
 import Detail from '../components/Detail';
 
+import { useSelector, useDispatch } from 'react-redux';
+
 const fetchedData = [
   {
     "symbol" : "GOOG",
@@ -45,13 +47,17 @@ const fetchedData = [
 function Dashboard({ fetchedStocks, filterStock }) {
   const { path, url } = useRouteMatch();
 
+  const fetchedData = useSelector(state => state.data);
+  console.log('data1', fetchedData)
+  // const dispatch = useDispatch();
+
   // const handleClick = book => { remove(book); };
   // const handleFilterChange = event => filterStock(event.target.value);
 
   return (
     <div>
       <h2>Dashboard</h2>
-      <ul>
+      {/* <ul>
         { fetchedData.map( (data, symbol) => (
           <>
             <Stock key={data.id}
@@ -60,12 +66,12 @@ function Dashboard({ fetchedStocks, filterStock }) {
               change={data.historical[0].changePercent}
             />
 
-            <li key={symbol}>
+            <li key={data.id}>
               <Link to={`${url}/${data.symbol}`}>{data.symbol}</Link>
             </li>
           </>
         ))}
-      </ul>
+      </ul> */}
 
       <Switch>
         <Route exact path={path} />

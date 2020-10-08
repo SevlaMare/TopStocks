@@ -1,6 +1,6 @@
 const INITIAL_STATE = '';
 
-const FilterReducer = (state = INITIAL_STATE, action) => {
+const FilterDataReducer = (state = INITIAL_STATE, action) => {
   if (action.type === 'CHANGE_FILTER') {
     const categ = action.filter === 'all' ? '' : action.filter;
     return categ;
@@ -9,4 +9,4 @@ const FilterReducer = (state = INITIAL_STATE, action) => {
   return state;
 };
 
-export default FilterReducer;
+export default FilterDataReducer;
