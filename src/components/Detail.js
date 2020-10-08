@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+// import { useParams, useRouteMatch } from "react-router-dom";
 
 
 const fetchedData = [
@@ -39,30 +39,12 @@ const fetchedData = [
   },
 ]
 
-const filted = {
-  "symbol" : "GOOG",
-  "historical" : [
-    {
-      "date" : "2020-10-06",
-      "close" : 1453.44,
-      "volume" : 1245423.0,
-      "changePercent" : -1.5,
-    },
-    {
-      "date" : "2020-10-05",
-      "close" : 1486.02002,
-      "volume" : 1111500.0,
-      "changePercent" : 1.351,
-    }
-  ],
-}
-
-const Detail = () => {
-  let { stockid } = useParams();
+const Detail = props => {
+  const { stockid } = props;
 
   return (
     <div className="stock">
-      <h3>Requested topic ID: {topicId}</h3>
+      <h3>Requested stock ID: {stockid}</h3>
     </div>
   );
 }

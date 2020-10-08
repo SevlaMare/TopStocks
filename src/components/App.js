@@ -13,13 +13,20 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
+        <nav className="flex">
+          <Link to="/">Home</Link>
+          <Link to="/dashboard">DashBoard</Link>
+        </nav>
 
-        <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/dashboard" component={Dashboard} />
+
+        {/* <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/detail" component={Detail} />
-        </Switch>
+        </Switch> */}
       </div>
     </Router>
   );

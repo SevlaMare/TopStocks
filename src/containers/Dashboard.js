@@ -45,11 +45,11 @@ import { BrowserRouter as Router, Switch, Route, Link,
   useRouteMatch, useParams } from "react-router-dom";
 
 const Dashboard = () => {
-  let { path, url, match } = useRouteMatch();
+
 
   return (
     <>
-      { fetchedData.map( (data, idx) => (
+      { fetchedData.map( (data, symbol) => (
         <>
           <Stock key={data.id}
             title={data.symbol}
@@ -57,11 +57,10 @@ const Dashboard = () => {
             change={data.historical[0].changePercent}
           />
 
-          <Link to={`/detail/${idx}`}>Google link</Link>
+          <Link to={`/detail/${stockid}`}>Google link</Link>
 
           <Switch>
-            <Route exact path="/detail/:stockid"
-              component={Detail} />
+            <Route path="/detail/:stockid" component={Detail} />
           </Switch>
         </>
       ))}
