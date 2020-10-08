@@ -17,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={About} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/detail/:stockId" component={Detail} />
         </Switch>
     </Router>
   );

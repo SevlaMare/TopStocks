@@ -41,7 +41,9 @@ const fetchedData = [
 function Detail() {
   let { stockId } = useParams(); // get end of url
 
-  return (<h3>{stockId}</h3>);
+  return (
+    <h3>{stockId}</h3>
+  );
 }
 
 export default Detail;

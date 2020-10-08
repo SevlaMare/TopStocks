@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from "react-router-dom";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import Stock from '../components/Stock';
 import Detail from '../components/Detail';
@@ -43,23 +43,32 @@ const fetchedData = [
 ]
 
 function Dashboard({ fetchedStocks, filterStock }) {
-  let { path, url } = useRouteMatch();
-  const handleClick = book => { remove(book); };
-  const handleFilterChange = event => filterStock(event.target.value);
+  const { path, url } = useRouteMatch();
+
+  // const handleClick = book => { remove(book); };
+  // const handleFilterChange = event => filterStock(event.target.value);
 
   return (
     <div>
       <h2>Dashboard</h2>
       <ul>
-        { fetchedData.map( ({ stockData, symbol }) => (
-          <li key={symbol}>
-            <Link to={`${url}/${symbol}`}>{symbol}</Link>
-          </li>
+        { fetchedData.map( (data, symbol) => (
+          <>
+            <Stock key={data.id}
+              title={data.symbol}
+              close={data.historical[0].close}
+              change={data.historical[0].changePercent}
+            />
+
+            <li key={symbol}>
+              <Link to={`${url}/${data.symbol}`}>{data.symbol}</Link>
+            </li>
+          </>
         ))}
       </ul>
 
       <Switch>
-        <Route exact path={path}> <h3>Please select a topic.</h3> </Route>
+        <Route exact path={path} />
         <Route path={`${path}/:stockId`}> <Detail /> </Route>
       </Switch>
     </div>
