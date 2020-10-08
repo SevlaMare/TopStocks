@@ -1,6 +1,5 @@
 import React from "react";
-// import { useParams, useRouteMatch } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 
 const fetchedData = [
   {
@@ -39,10 +38,10 @@ const fetchedData = [
   },
 ]
 
-const Detail = () => {
-  return (
-    <h3>Requested stock ID</h3>
-  );
+function Detail() {
+  let { stockId } = useParams(); // get end of url
+
+  return (<h3>{stockId}</h3>);
 }
 
 export default Detail;

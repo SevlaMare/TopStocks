@@ -1,11 +1,30 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Filter = () => {
-  return (
-    <div className="filter">
-      <h3>Filter Select</h3>
-    </div>
-  );
-}
+const CATEGORIES = ['GOOG', 'FB', 'AAPL'];
 
-export default Filter;
+const CategoryFilter = ({ filterStock }) => (
+  <form>
+    <select
+      type="text"
+      id="category"
+      name="category"
+      className="filter"
+      onChange={filterStock}
+      defaultValue={''}
+    >
+    <option value='' disabled> --- Select --- </option>
+    { CATEGORIES.map(category => (
+      <option key={category} value={category}>
+        {category}
+      </option>
+    ))}
+    </select>
+  </form>
+)
+
+// CategoryFilter.propTypes = {
+//   filterStock: PropTypes.func.isRequired,
+// };
+
+export default CategoryFilter;
