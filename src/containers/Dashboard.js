@@ -61,32 +61,13 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
     }
   }, [])
 
-  console.log('fetched?', data)
-  console.log('data slice 0', data[0]) // historicalStockList
-  // console.log('symbol', data[0]['historicalStockList'])
-
   // const handleClick = book => { remove(book); };
   // const handleFilterChange = event => filterStock(event.target.value);
 
   let renderData = () => {
     if (data.length > 0)
       return (
-        data[0].map( (data, historical) => (
-          <p>YA {data.symbol} </p>
-        ))
-      )
-
-    return null;
-  }
-
-  return (
-    <div>
-      <h2>Dashboard</h2>
-
-      <ul>
-        { renderData() }
-
-        {/* { fetchedData.map( (data, symbol) => (
+        data[0].map( (data, symbol) => (
           <>
             <Stock key={data.id}
               title={data.symbol}
@@ -98,8 +79,17 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
               <Link to={`${url}/${data.symbol}`}>{data.symbol}</Link>
             </li>
           </>
-        ))} */}
-      </ul>
+        ))
+      )
+
+    return null;
+  }
+
+  return (
+    <div>
+      <h2>Dashboard</h2>
+
+      <ul>{ renderData() }</ul>
 
       <Switch>
         <Route exact path={path} />
