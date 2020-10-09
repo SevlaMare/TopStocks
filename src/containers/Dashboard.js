@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from "react-router-dom";
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+// import PropTypes from 'prop-types';
 
 import Stock from '../components/Stock';
 import Detail from '../components/Detail';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { fetchData, filterData } from '../store/actions/index'
+import getData from '../connector'; // fetch fx
 
 const fetchedData = [
   {
@@ -47,7 +49,7 @@ const fetchedData = [
 function Dashboard({ fetchedStocks, filterStock }) {
   const { path, url } = useRouteMatch();
 
-  const fetchedData = useSelector(state => state.data);
+  const data = useSelector(state => state.data);
   console.log('data1', fetchedData)
   // const dispatch = useDispatch();
 
@@ -57,7 +59,8 @@ function Dashboard({ fetchedStocks, filterStock }) {
   return (
     <div>
       <h2>Dashboard</h2>
-      {/* <ul>
+
+      <ul>
         { fetchedData.map( (data, symbol) => (
           <>
             <Stock key={data.id}
@@ -71,7 +74,7 @@ function Dashboard({ fetchedStocks, filterStock }) {
             </li>
           </>
         ))}
-      </ul> */}
+      </ul>
 
       <Switch>
         <Route exact path={path} />
@@ -85,17 +88,17 @@ function Dashboard({ fetchedStocks, filterStock }) {
 //   fetchedBooks: PropTypes.array,
 // };
 
-// const mapStateToProps = state => ({
-//   fetchedStocks: state.book.books.filter(book => book.category === (state.filter || book.category)),
-// });
+const mapStateToProps = state => ({
+  fetchedStocks: state.book.books.filter(book => book.category === (state.filter || book.category)),
+});
 
-// const mapDispatchToProps = dispatch => ({
-//   filterStock: filter => { dispatch(filterStock(filter)); },
-// });
+const mapDispatchToProps = dispatch => ({
+  filterStock: filter => { dispatch(filterStock(filter)); },
+});
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps,
-// )(Dashboard);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Dashboard);
 
-export default Dashboard;
+// export default Dashboard;

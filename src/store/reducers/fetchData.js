@@ -1,5 +1,3 @@
-import getData from '../../connector';
-
 const fetchedData = [
   {
     "symbol" : "GOOG",
@@ -37,34 +35,12 @@ const fetchedData = [
   },
 ]
 
-const INITIAL_STATE = {
-  books: [
-    { id: 1, title: 'Book 1', category: 'Action' },
-    { id: 2, title: 'Book 2', category: 'Biography' },
-    { id: 3, title: 'Book 3', category: 'Learning' },
-  ],
-};
+const fetchDataReducer = (state = [], action) => {
+  if (action.type === 'FETCH_DATA') {
+    return [...state, action.data];
+  }
 
-let FETCH_STATE;
-getData().then(data => FETCH_STATE = data);
-
-const fetchDataReducer = (state = INITIAL_STATE, action) => {
-  // if (action.type === 'FETCH_STOCKS') {
-  //   const id = Math.random();
-  //   const bookWithId = { ...action.book, id };
-
-  //   return {
-  //     books: [...state.books, bookWithId],
-  //   };
-  // }
-
-  // if (action.type === 'CHANGE_FILTER') {
-  //   const index = state.books.findIndex(b => b.id === action.book.id);
-
-  //   return { books: [...state.books.slice(0, index), ...state.books.slice(index + 1)] };
-  // }
-
-  console.log('fetch ready?', state)
+  console.log('reducer run, fetch?', state)
 
   return state;
 };

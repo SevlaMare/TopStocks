@@ -21,3 +21,8 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('#app'),
 );
+
+// import getData from './connector';
+// getData()
+//   .then((data) => { console.log('conn check', data)})
+//   .catch(err => displayError(err));
