@@ -5,7 +5,6 @@ import Dashboard from '../Containers/Dashboard';
 import Navbar from './Navbar';
 import Filter from './Filter';
 import About from './About';
-import Detail from './Detail';
 
 function App() {
   return (
