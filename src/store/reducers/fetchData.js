@@ -36,11 +36,9 @@ const fetchedData = [
 ]
 
 const fetchDataReducer = (state = [], action) => {
-  if (action.type === 'FETCH_DATA') {
+  if (action.type === 'STORE_DATA') {
     return [...state, action.data];
   }
-
-  console.log('reducer run, fetch?', state)
 
   return state;
 };

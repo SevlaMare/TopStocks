@@ -1,9 +1,9 @@
-const fetchData = data => (
-  { type: 'FETCH_DATA', data }
+const STORE_DATA = data => (
+  { type: 'STORE_DATA', data }
 );
 
-const filterData = category => (
+const FILTER_DATA = category => (
   { type: 'FILTER_DATA', filter: category }
 );
 
-export { fetchData, filterData };
+export { STORE_DATA, FILTER_DATA };

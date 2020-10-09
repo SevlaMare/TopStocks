@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+import regeneratorRuntime from "regenerator-runtime";
 // import PropTypes from 'prop-types';
 
 import Stock from '../components/Stock';
 import Detail from '../components/Detail';
 
-import { fetchData, filterData } from '../store/actions/index'
+import { STORE_DATA, FILTER_DATA } from '../store/actions/index'
 import getData from '../connector'; // fetch fx
 
 const fetchedData = [
@@ -46,12 +47,22 @@ const fetchedData = [
   },
 ]
 
-function Dashboard({ fetchedStocks, filterStock }) {
+function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
   const { path, url } = useRouteMatch();
 
-  const data = useSelector(state => state.data);
-  console.log('data1', fetchedData)
-  // const dispatch = useDispatch();
+  const data = useSelector(state => state.data); // map state
+  const dispatch = useDispatch(); // map dispatch
+
+  useEffect(() => {
+    if (data.length === 0) {
+      getData()
+        .then((data) => { dispatch(STORE_DATA((data))) })
+        .catch(errorMessage => 'fail');
+    }
+  }, [data])
+
+  console.log('fetched?', data)
+  console.log('fetched?', data[0])
 
   // const handleClick = book => { remove(book); };
   // const handleFilterChange = event => filterStock(event.target.value);
@@ -60,7 +71,7 @@ function Dashboard({ fetchedStocks, filterStock }) {
     <div>
       <h2>Dashboard</h2>
 
-      <ul>
+      {/* <ul>
         { fetchedData.map( (data, symbol) => (
           <>
             <Stock key={data.id}
@@ -74,7 +85,7 @@ function Dashboard({ fetchedStocks, filterStock }) {
             </li>
           </>
         ))}
-      </ul>
+      </ul> */}
 
       <Switch>
         <Route exact path={path} />
@@ -88,17 +99,4 @@ function Dashboard({ fetchedStocks, filterStock }) {
 //   fetchedBooks: PropTypes.array,
 // };
 
-const mapStateToProps = state => ({
-  fetchedStocks: state.book.books.filter(book => book.category === (state.filter || book.category)),
-});
-
-const mapDispatchToProps = dispatch => ({
-  filterStock: filter => { dispatch(filterStock(filter)); },
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Dashboard);
-
-// export default Dashboard;
+export default Dashboard;
