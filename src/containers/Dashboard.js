@@ -59,10 +59,11 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
         dispatch(STORE_DATA((data.historicalStockList)))
       })
     }
-  }, [data])
+  }, [])
 
   console.log('fetched?', data)
-  console.log('fetched? 0', data[0])
+  console.log('data slice 0', data[0]) // historicalStockList
+  // console.log('symbol', data[0]['historicalStockList'])
 
   // const handleClick = book => { remove(book); };
   // const handleFilterChange = event => filterStock(event.target.value);
@@ -70,7 +71,9 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
   let renderData = () => {
     if (data.length > 0)
       return (
-        <p>YA </p>
+        data[0].map( (data, historical) => (
+          <p>YA {data.symbol} </p>
+        ))
       )
 
     return null;
@@ -82,6 +85,7 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
 
       <ul>
         { renderData() }
+
         {/* { fetchedData.map( (data, symbol) => (
           <>
             <Stock key={data.id}
