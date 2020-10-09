@@ -55,33 +55,34 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
 
   useEffect(() => {
     if (data.length === 0) {
-      getData()
-        .then((data) => { dispatch(STORE_DATA((data))) })
-        .catch(errorMessage => 'fail');
+      getData().then((data) => { 
+        dispatch(STORE_DATA((data.historicalStockList)))
+      })
     }
   }, [data])
 
   console.log('fetched?', data)
-  console.log('fetched?', data[0])
+  console.log('fetched? 0', data[0])
 
   // const handleClick = book => { remove(book); };
   // const handleFilterChange = event => filterStock(event.target.value);
+
+  let renderData = () => {
+    if (data.length > 0)
+      return (
+        <p>YA </p>
+      )
+
+    return null;
+  }
 
   return (
     <div>
       <h2>Dashboard</h2>
 
-      {/* { Object.keys(data).map(item => {
-        if(data.length > 0) {
-          return (
-           <p>{item}</p>
-         )}
-
-        return null
-      })} */}
-
-      {/* <ul>
-        { fetchedData.map( (data, symbol) => (
+      <ul>
+        { renderData() }
+        {/* { fetchedData.map( (data, symbol) => (
           <>
             <Stock key={data.id}
               title={data.symbol}
@@ -93,8 +94,8 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
               <Link to={`${url}/${data.symbol}`}>{data.symbol}</Link>
             </li>
           </>
-        ))}
-      </ul> */}
+        ))} */}
+      </ul>
 
       <Switch>
         <Route exact path={path} />

@@ -24,5 +24,6 @@ ReactDOM.render(
 
 // import getData from './connector';
 // getData()
-//   .then((data) => { console.log('conn check', data)})
-//   .catch(err => displayError(err));
+//   .then((data) => {
+//     console.log('conn check', data)
+//   })
