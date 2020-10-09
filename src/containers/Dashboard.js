@@ -71,6 +71,15 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
     <div>
       <h2>Dashboard</h2>
 
+      {/* { Object.keys(data).map(item => {
+        if(data.length > 0) {
+          return (
+           <p>{item}</p>
+         )}
+
+        return null
+      })} */}
+
       {/* <ul>
         { fetchedData.map( (data, symbol) => (
           <>
