@@ -93,7 +93,8 @@ function Dashboard({ fetchedData, fetchedStocks, filterStock }) {
 
       <Switch>
         <Route exact path={path} />
-        <Route path={`${path}/:stockId`}> <Detail /> </Route>
+        {/* render detail component when url match */}
+        <Route path={`${path}/:stockId`} component={Detail} />
       </Switch>
     </div>
   );

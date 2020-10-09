@@ -6,7 +6,6 @@ const Navbar = () => {
     <nav className="flex">
       <Link to="/">About</Link>
       <Link to="/dashboard">DashBoard</Link>
-      <Link to="/detail">Detail</Link>
     </nav>
   )
 }

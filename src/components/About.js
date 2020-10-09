@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <h3>Create by Thiago Miranda.</h3>
+    <h3>All information provide in this APP is not real time.</h3>
   )
 }
 

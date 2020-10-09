@@ -6,8 +6,8 @@ const Stock = props => {
   return (
     <div className="stock">
       <h2>{title}</h2>
-      <p>{change}%</p>
-      <p>{close} USD</p>
+      <p>{change.toFixed(2)}%</p>
+      <p>{close.toFixed(2)} USD</p>
     </div>
   );
 }
