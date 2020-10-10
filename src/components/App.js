@@ -6,19 +6,20 @@ import Navbar from './Navbar';
 import Filter from './Filter';
 import About from './About';
 
-function App() {
-  return (
-    <Router>
-        <Navbar />
-        <Filter />
+import { Provider } from 'react-redux';
+import store from '../store/store';
 
-        {/* control navbar links */}
-        <Switch>
-          <Route exact path="/" component={About} />
-          <Route path="/dashboard" component={Dashboard} />
-        </Switch>
+const App = () => (
+  <Provider store={store}>
+    <Router>
+      <Navbar />
+      <Filter />
+
+      {/* control navbar links */}
+      <Route exact path="/" component={About} />
+      <Route path="/dashboard" component={Dashboard} />
     </Router>
-  );
-}
+  </Provider>
+);
 
 export default App;

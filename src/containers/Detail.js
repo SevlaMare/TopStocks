@@ -8,13 +8,14 @@ let renderDetail = (data) => {
       <>
         <p>Company: {data.symbol}</p>
         { data.historical.map(item => {
-          return <p>{item.date}Serie x</p>
+          return (
+            <>
+              <p>{item.date}</p>
+              <p>{item.changePercent.toFixed(2)}% {item.open.toFixed(2)} {item.close.toFixed(2)}</p>
+              <hr></hr>
+            </>
+          )
         }) }
-
-        <p>Open {data.historical[0].open}</p>
-        <p>Close {data.historical[0].close}</p>
-
-        <p>Change {data.historical[0].changePercent}</p>
         <hr></hr>
       </>
     ))
