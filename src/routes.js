@@ -13,8 +13,8 @@ const Routes = () => (
     <Filter />
 
     <Switch>
-      <Route exact path="/" component={About} />
-      <Route path="/dashboard" component={Dashboard} />
+      <Route exact path="/" component={Dashboard} />
+      <Route path="/about" component={About} />
       <Route path="/detail/:stockId" component={Detail} />
     </Switch>
   </BrowserRouter>

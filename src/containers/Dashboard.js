@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import regeneratorRuntime from "regenerator-runtime";
 
 import Stock from '../components/Stock';
-import Detail from './Detail';
 
 import { STORE_DATA, FILTER_DATA } from '../store/actions/index'
 import getData from '../connector'; // fetch fx
@@ -27,7 +26,7 @@ function Dashboard() {
   let renderData = () => {
     if (data.length > 0)
       return (
-        data[0].map( (data, symbol) => (
+        data[0].map( data => (
           <>
             <Stock key={data.id}
               title={data.symbol}
