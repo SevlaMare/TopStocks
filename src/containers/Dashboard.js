@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import regeneratorRuntime from "regenerator-runtime";
 
@@ -10,8 +10,6 @@ import { STORE_DATA, FILTER_DATA } from '../store/actions/index'
 import getData from '../connector'; // fetch fx
 
 function Dashboard() {
-  const { path, url } = useRouteMatch();
-
   const data = useSelector(state => state.data); // map state
   const dispatch = useDispatch(); // map dispatch
 
@@ -38,7 +36,7 @@ function Dashboard() {
             />
 
             <li key={data.id}>
-              <Link to={`${url}/${data.symbol}`}>{data.symbol}</Link>
+              <Link to={`detail/${data.symbol}`}>{data.symbol}</Link>
             </li>
           </>
         ))
@@ -52,12 +50,6 @@ function Dashboard() {
       <h2>Dashboard</h2>
 
       <ul>{ renderData() }</ul>
-
-      <Switch>
-        <Route exact path={path} />
-        {/* render detail component when url match */}
-        <Route path={`${path}/:stockId`} component={Detail} />
-      </Switch>
     </div>
   );
 }
