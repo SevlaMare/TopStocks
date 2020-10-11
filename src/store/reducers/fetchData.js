@@ -1,5 +1,4 @@
-// mock data in case API reach free limit use
-const fetchedData = [
+const mockData = [
   {
     "symbol" : "MSFT",
     "historical" : [ {
@@ -368,7 +367,7 @@ const fetchedData = [
   ]}
 ]
 
-const fetchDataReducer = (state = [fetchedData], action) => {
+const fetchDataReducer = (state = [mockData], action) => {
   if (action.type === 'STORE_DATA') {
     return [...state, action.data];
   }

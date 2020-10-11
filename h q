@@ -1,0 +1,32 @@
+[33m89957ff[m[33m ([m[1;36mHEAD -> [m[1;32mfeature-app[m[33m)[m adjust api call
+[33mfe8e07a[m query details
+[33m9011cd4[m change home
+[33m656aba3[m fix nested route path
+[33md3d06d6[m extract routes
+[33m6c30b54[m better organization
+[33m42f75d5[m render serie
+[33ma1f2804[m detail as container
+[33md24a37e[m mock data api limit reached
+[33me2fee0f[m routes clean up
+[33mc3a871f[m dashboard v1
+[33m92d41f2[m fetch render v1
+[33m2911a1f[m render v0.5
+[33me54c880[m map over obj
+[33mc5ed5ce[m fetch v0.8
+[33m746069d[m fetch api v0.5
+[33ma4c66f4[m fetch v1
+[33m46f1603[m dashboard cards
+[33m56188c4[m filter v1
+[33mf64102e[m url v1
+[33me5ec6ba[m router v4 v0.6
+[33m070d273[m test router v4
+[33m5f1e430[m urls v0.5
+[33mc6b23a2[m nested route
+[33m431f97d[m url v1
+[33mac14ca9[m detail v1
+[33mfc17fde[m stock comp v1
+[33m7638927[m basic style
+[33m413d791[m fetch api
+[33m0213419[m basic files sctucture
+[33m0175597[m readme v1
+[33mfbc4782[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m start

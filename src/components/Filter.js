@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CATEGORIES = ['GOOG', 'FB', 'AAPL'];
+import STOCKS_LIST from '../constants';
+const CATEGORIES = Object.keys(STOCKS_LIST);
 
-const CategoryFilter = ({ filterStock }) => (
+const CategoryFilter = ({ filterCategory }) => (
   <form>
     <select
       type="text"
       id="category"
       name="category"
       className="filter"
-      onChange={filterStock}
+      onChange={filterCategory}
       defaultValue={''}
     >
-    <option value='' disabled> --- Select --- </option>
-    { CATEGORIES.map(category => (
-      <option key={category} value={category}>
-        {category}
-      </option>
-    ))}
+      <option value='' disabled> --- Select --- </option>
+      { CATEGORIES.map(category => (
+        <option key={category} value={category}>
+          {category}
+        </option>
+      ))}
     </select>
   </form>
 )

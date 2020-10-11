@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Dashboard from './Containers/Dashboard';
-import Detail from './Containers/Detail';
-import About from './Components/About';
-import Navbar from './Components/Navbar';
-import Filter from './Components/Filter';
+import Dashboard from './containers/Dashboard';
+import Detail from './containers/Detail';
+import About from './components/About';
+import Navbar from './components/Navbar';
 
 const Routes = () => (
   <BrowserRouter>
     <Navbar />
-    <Filter />
 
     <Switch>
       <Route exact path="/" component={Dashboard} />
