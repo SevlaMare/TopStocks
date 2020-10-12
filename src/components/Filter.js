@@ -14,7 +14,7 @@ const CategoryFilter = ({ filterCategory }) => (
       onChange={filterCategory}
       defaultValue={''}
     >
-      <option value='' disabled> --- Select --- </option>
+      <option value='all'> All </option>
       { CATEGORIES.map(category => (
         <option key={category} value={category}>
           {category}
