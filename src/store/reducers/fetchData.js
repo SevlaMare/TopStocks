@@ -369,12 +369,12 @@ const mockData = [
 
 const INITIAL_STATE = {
   base: mockData,
-  filter: ''
+  filtered: ''
 }
 
-// state = [mockData]
 
-const fetchDataReducer = (state = [mockData], action) => {
+// const fetchDataReducer = (state = [mockData], action) => {
+const fetchDataReducer = (state = INITIAL_STATE, action) => {
   if (action.type === 'STORE_DATA') {
     return [...state, action.data];
   }
