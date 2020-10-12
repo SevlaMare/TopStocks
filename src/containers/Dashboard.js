@@ -14,7 +14,6 @@ import getData from '../connector'; // fetch fx
 
 function Dashboard() {
   const data = useSelector(state => state.data); // map state
-  console.log('state?', data)
   const dispatch = useDispatch(); // map dispatch
 
   const handleFilterChange = event => dispatch(FILTER_DATA(event.target.value));
@@ -29,14 +28,17 @@ function Dashboard() {
 
 
   console.log('stock arrays', data.base)
-  console.log('filter ok?',  data.base.filter(item => item.symbol === 'AAPL'))
-  // data.filter(item => item.symbol === (data.filter || item.symbol))
+  console.log('filter ok?', data.base.filter(item => item.symbol === 'AAPL'))
+  console.log('real filter',
+    data.base.filter(item => item.symbol === (data.filtered || item.symbol))
+  )
+  // data.base.filter(item => item.symbol === (data.filtered || item.symbol))
 
 
   let renderData = () => {
-    if (data.length > 0)
+    if (data.base.length > 0)
       return (
-        data[0].map( data => (
+        data.base.map( data => (
           <>
             <Stock key={data.id}
               title={data.symbol}
