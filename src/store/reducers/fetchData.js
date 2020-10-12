@@ -367,6 +367,13 @@ const mockData = [
   ]}
 ]
 
+const INITIAL_STATE = {
+  base: mockData,
+  filter: ''
+}
+
+// state = [mockData]
+
 const fetchDataReducer = (state = [mockData], action) => {
   if (action.type === 'STORE_DATA') {
     return [...state, action.data];

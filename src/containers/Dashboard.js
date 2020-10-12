@@ -13,7 +13,7 @@ import getData from '../connector'; // fetch fx
 
 
 function Dashboard() {
-  const data = useSelector(state => state.data[0]); // map state
+  const data = useSelector(state => state.data); // map state
   const dispatch = useDispatch(); // map dispatch
 
   const handleFilterChange = event => dispatch(FILTER_DATA(event.target.value));
@@ -27,13 +27,8 @@ function Dashboard() {
   }, [])
 
 
-  // filter v1
-  // data[0].map(item => {
-  //   if (item.symbol === 'AAPL') return console.log('item is', item)
-  // })
-
-  // console.log('filter ok?',  data[0].filter(item => item.symbol === 'AAPL'))
-  console.log('filter ok?',  data.filter(item => item.symbol === 'AAPL'))
+  console.log('state', data)
+  console.log('filter ok?',  data[0].filter(item => item.symbol === 'AAPL'))
   // data.filter(item => item.symbol === (data.filter || item.symbol))
 
 
@@ -41,7 +36,7 @@ function Dashboard() {
   let renderData = () => {
     if (data.length > 0)
       return (
-        data.map( data => (
+        data[0].map( data => (
           <>
             <Stock key={data.id}
               title={data.symbol}
