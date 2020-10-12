@@ -26,6 +26,11 @@ function Dashboard() {
     }
   }, [])
 
+  // filter based on dropdown option
+  console.log("FROM COMP", data.filter(stock => stock.category === (data.filter || stock.category)))
+  // state.book.books.filter(book => book.category === (state.filter || book.category))
+
+
   let renderData = () => {
     if (data.length > 0)
       return (
@@ -49,10 +54,14 @@ function Dashboard() {
 
   return (
     <div>
-      <h2>Dashboard</h2>
-      <ul>{ renderData() }</ul>
+      <div id="filter">
+        <CategoryFilter filterCategory={handleFilterChange}/>
+      </div>
 
-      <CategoryFilter filterCategory={handleFilterChange}/>
+      <div id="dash">
+        <h2>Dashboard</h2>
+        <ul>{ renderData() }</ul>
+      </div>
     </div>
   );
 }
