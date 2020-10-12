@@ -26,9 +26,18 @@ function Dashboard() {
     }
   }, [])
 
-  // filter based on dropdown option
-  console.log("FROM COMP", data.filter(stock => stock.category === (data.filter || stock.category)))
-  // state.book.books.filter(book => book.category === (state.filter || book.category))
+
+  // console.log('ok', data)
+  // console.log('has filter on state?', data.filtered)
+
+  data[0].map(item => {
+    if (item.symbol === 'AAPL') return console.log('item is', item)
+  })
+
+  console.log('ya?',  data[0].filter(item => item.symbol === 'AAPL'))
+ 
+  // data.filter(item => item.symbol === (data.filter || item.symbol))
+
 
 
   let renderData = () => {

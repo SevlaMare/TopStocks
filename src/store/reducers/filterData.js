@@ -1,12 +1,10 @@
-const INITIAL_STATE = '';
-
-const FilterDataReducer = (state = INITIAL_STATE, action) => {
+const FilterDataReducer = (state = '', action) => {
   if (action.type === 'FILTER_DATA') {
-    const categ = action.filter === 'all' ? '' : action.filter;
+    const option = action.filtered === 'All' ? '' : action.filtered;
 
-    console.log('filter reducer op:', categ)
+    console.log('from reducer =', option)
 
-    return categ;
+    return option;
   }
 
   return state;

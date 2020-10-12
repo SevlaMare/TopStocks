@@ -14,7 +14,7 @@ const CategoryFilter = ({ filterCategory }) => (
       onChange={filterCategory}
       defaultValue={''}
     >
-      <option value='all'> All </option>
+      <option value='All'>All</option>
       { CATEGORIES.map(category => (
         <option key={category} value={category}>
           {category}
