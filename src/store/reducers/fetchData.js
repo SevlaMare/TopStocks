@@ -372,7 +372,6 @@ const INITIAL_STATE = {
   filtered: ''
 }
 
-
 // const fetchDataReducer = (state = [mockData], action) => {
 const fetchDataReducer = (state = INITIAL_STATE, action) => {
   if (action.type === 'STORE_DATA') {

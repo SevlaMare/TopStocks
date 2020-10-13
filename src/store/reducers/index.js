@@ -4,8 +4,8 @@ import fetchDataReducer from './fetchData';
 import filterDataReducer from './filterData';
 
 const allReducers = combineReducers({
-  data: fetchDataReducer,
-  filter: filterDataReducer,
+  dataR: fetchDataReducer,
+  filterR: filterDataReducer,
 });
 
 export default allReducers;

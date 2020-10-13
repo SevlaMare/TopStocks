@@ -13,7 +13,7 @@ import getData from '../connector'; // fetch fx
 
 
 function Dashboard() {
-  const data = useSelector(state => state.data); // map state
+  const data = useSelector(state => state.dataR.base.filter(item => item.symbol === (state.filterR || item.symbol))); // map state
   const dispatch = useDispatch(); // map dispatch
 
   const handleFilterChange = event => dispatch(FILTER_DATA(event.target.value));
@@ -26,19 +26,10 @@ function Dashboard() {
     }
   }, [])
 
-
-  console.log('stock arrays', data.base)
-  console.log('filter ok?', data.base.filter(item => item.symbol === 'AAPL'))
-  console.log('real filter',
-    data.base.filter(item => item.symbol === (data.filtered || item.symbol))
-  )
-  // data.base.filter(item => item.symbol === (data.filtered || item.symbol))
-
-
   let renderData = () => {
-    if (data.base.length > 0)
+    if (data.length > 0)
       return (
-        data.base.map( data => (
+        data.map( data => (
           <>
             <Stock key={data.id}
               title={data.symbol}
