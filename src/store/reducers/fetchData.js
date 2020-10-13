@@ -11,7 +11,7 @@ const mockData = [
       volume: 2.6428E7,
       unadjustedVolume: 2.6428E7,
       change: 4.58,
-      changePercent: 2.168,
+      changePercent: -2.168,
       vwap: 214.3,
       label: 'October 09, 20',
       changeOverTime: 0.02168,
