@@ -1,4 +1,4 @@
-// import regeneratorRuntime from 'regenerator-runtime';
+import regeneratorRuntime from 'regenerator-runtime';
 
 import STOCKS_LIST from './constants';
 

@@ -1,4 +1,12 @@
 #dash {
-  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 600px;
+  margin: 0 auto;
   background: #eee;
+}
+
+.title {
+  margin-left: 20px;
 }

@@ -37,11 +37,8 @@ function Dashboard() {
               title={data.symbol}
               close={data.historical[0].close}
               change={data.historical[0].changePercent}
+              link={<Link to={`detail/${data.symbol}`}>{data.symbol}</Link>}
             />
-
-            <li key={data.id}>
-              <Link to={`detail/${data.symbol}`}>{data.symbol}</Link>
-            </li>
           </>
         ))
       );
@@ -51,16 +48,16 @@ function Dashboard() {
   };
 
   return (
-    <div>
+    <main>
       <div id="filter">
         <CategoryFilter filterCategory={handleFilterChange} />
       </div>
 
+      <h2 className="title">Dashboard</h2>
       <div id="dash">
-        <h2>Dashboard</h2>
-        <ul>{ renderData() }</ul>
+        { renderData() }
       </div>
-    </div>
+    </main>
   );
 }
 

@@ -1,5 +1,12 @@
 .stock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding: 15px;
-  width: 300px;
-  border: 1px solid lightblue;
+  margin: 15px;
+  width: 175px;
+
+  border: 2px solid lightgray;
+  border-radius: 5px;
 }
