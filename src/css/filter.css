@@ -1,3 +1,11 @@
 .filter {
-  margin: 40px;
+  width: 120px;
+}
+
+.filter select {
+  padding-left: 10px;
+  height: 25px;
+  width: 90px;
+  font-weight: 700;
+  color: #333;
 }

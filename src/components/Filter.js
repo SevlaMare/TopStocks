@@ -6,7 +6,7 @@ import STOCKS_LIST from '../constants';
 const CATEGORIES = Object.keys(STOCKS_LIST);
 
 const CategoryFilter = ({ filterCategory }) => (
-  <form>
+  <form className="filter">
     <select
       type="text"
       id="category"

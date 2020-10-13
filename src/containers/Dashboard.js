@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 // import regeneratorRuntime from 'regenerator-runtime';
 
-// components
 import Stock from '../components/Stock';
 import CategoryFilter from '../components/Filter';
 
-// actions
 import { STORE_DATA, FILTER_DATA } from '../store/actions/index';
-import getData from '../connector'; // fetch fx
+import getData from '../connector';
 
 function Dashboard() {
   const data = useSelector(state => state.dataR.base
@@ -49,14 +47,19 @@ function Dashboard() {
 
   return (
     <main>
-      <div id="filter">
-        <CategoryFilter filterCategory={handleFilterChange} />
-      </div>
+      <article className="content">
+        <section id="dash-left">
+          <h2 className="title">DASHBOARD</h2>
+          <div id="dash">
+            { renderData() }
+          </div>
+        </section>
 
-      <h2 className="title">Dashboard</h2>
-      <div id="dash">
-        { renderData() }
-      </div>
+        <section id="dash-right">
+          <h2 className="title">OPTIONS</h2>
+          <CategoryFilter filterCategory={handleFilterChange} />
+        </section>
+      </article>
     </main>
   );
 }
