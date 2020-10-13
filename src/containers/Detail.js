@@ -6,27 +6,23 @@ const renderDetail = (data, stockId) => {
   const find = data.base.filter(element => element.symbol === stockId);
 
   return (
+    // console.log(sliced[0].historical)
+    // { sliced[0].historical.map(item => {
+    //   console.log('find', item)
+    // })}
+
     find.map(data => (
       <>
-        <p>
-          Company:
-          {data.symbol}
-        </p>
+        <p> Company: {data.symbol} </p>
+
         { data.historical.map(item => (
           <>
-            <p>{item.date}</p>
-            <p>
-              {item.changePercent.toFixed(2)}
-              %
-              {' '}
-              {item.open.toFixed(2)}
-              {' '}
-              {item.close.toFixed(2)}
-            </p>
-            <hr />
+            <p> Day {item.date} </p>
+            <p> Change {item.changePercent.toFixed(2)} % </p>
+            <p> Open  {item.open.toFixed(2)} </p>
+            <p> Close {item.close.toFixed(2)} </p>
           </>
         )) }
-        <hr />
       </>
     ))
   );
@@ -38,7 +34,7 @@ function Detail() {
 
   return (
     <div className="detail">
-      <h3>{stockId}</h3>
+      <h3 className="title">{stockId}</h3>
       { renderDetail(data, stockId) }
     </div>
   );
