@@ -1,32 +1,39 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-let renderDetail = (data, stockId) => {
-  console.log('DATA IS', data)
+const renderDetail = (data, stockId) => {
   const find = data.base.filter(element => element.symbol === stockId);
 
   return (
-    find.map( data => (
+    find.map(data => (
       <>
-        <p>Company: {data.symbol}</p>
-        { data.historical.map(item => {
-          return (
-            <>
-              <p>{item.date}</p>
-              <p>{item.changePercent.toFixed(2)}% {item.open.toFixed(2)} {item.close.toFixed(2)}</p>
-              <hr></hr>
-            </>
-          )
-        }) }
-        <hr></hr>
+        <p>
+          Company:
+          {data.symbol}
+        </p>
+        { data.historical.map(item => (
+          <>
+            <p>{item.date}</p>
+            <p>
+              {item.changePercent.toFixed(2)}
+              %
+              {' '}
+              {item.open.toFixed(2)}
+              {' '}
+              {item.close.toFixed(2)}
+            </p>
+            <hr />
+          </>
+        )) }
+        <hr />
       </>
     ))
   );
 };
 
 function Detail() {
-  let { stockId } = useParams(); // get end of url
+  const { stockId } = useParams(); // get end of url
   const data = useSelector(state => state.dataR); // map state
 
   return (

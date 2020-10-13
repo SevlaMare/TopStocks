@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import STOCKS_LIST from '../constants';
+
 const CATEGORIES = Object.keys(STOCKS_LIST);
 
 const CategoryFilter = ({ filterCategory }) => (
@@ -12,9 +13,9 @@ const CategoryFilter = ({ filterCategory }) => (
       name="category"
       className="filter"
       onChange={filterCategory}
-      defaultValue={''}
+      defaultValue=""
     >
-      <option value='All'>All</option>
+      <option value="All">All</option>
       { CATEGORIES.map(category => (
         <option key={category} value={category}>
           {category}
@@ -22,10 +23,10 @@ const CategoryFilter = ({ filterCategory }) => (
       ))}
     </select>
   </form>
-)
+);
 
-// CategoryFilter.propTypes = {
-//   filterStock: PropTypes.func.isRequired,
-// };
+CategoryFilter.propTypes = {
+  filterCategory: PropTypes.func.isRequired,
+};
 
 export default CategoryFilter;

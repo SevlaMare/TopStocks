@@ -4,6 +4,6 @@ const STOCKS_LIST = {
   GOOG: 'Google Inc.',
   AMZN: 'Amazon.com, Inc.',
   EBAY: 'eBay Inc.',
-}
+};
 
 export default STOCKS_LIST;

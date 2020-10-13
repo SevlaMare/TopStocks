@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Dashboard from './containers/Dashboard';
 import Detail from './containers/Detail';
@@ -16,6 +16,6 @@ const Routes = () => (
       <Route path="/detail/:stockId" component={Detail} />
     </Switch>
   </BrowserRouter>
-)
+);
 
 export default Routes;
