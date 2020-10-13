@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
 let renderDetail = (data, stockId) => {
-  const find = data[0].filter(element => element.symbol === stockId);
+  const find = data.base.filter(element => element.symbol === stockId);
 
   return (
     find.map( data => (
