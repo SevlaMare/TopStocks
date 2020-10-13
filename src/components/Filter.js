@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import STOCKS_LIST from '../constants';
 
-const CATEGORIES = Object.keys(STOCKS_LIST);
+const CATEGORIES = Object.keys(STOCKS_LIST).sort();
 
 const CategoryFilter = ({ filterCategory }) => (
   <form className="filter">
