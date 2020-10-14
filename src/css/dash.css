@@ -1,5 +1,6 @@
 .content {
   display: flex;
+  justify-content: space-between;
 
   margin-top: -75px;
   border: 15px solid #fff;
