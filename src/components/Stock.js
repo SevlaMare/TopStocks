@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Stock = props => {
-  const { title, close, change, link } = props;
+  const { close, change, link } = props;
 
   return (
     <div className="stock">
@@ -14,7 +14,6 @@ const Stock = props => {
 };
 
 Stock.propTypes = {
-  title: PropTypes.string.isRequired,
   close: PropTypes.number.isRequired,
   change: PropTypes.number.isRequired,
   link: PropTypes.string.isRequired,
