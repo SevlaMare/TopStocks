@@ -1,10 +1,9 @@
 nav {
+  height: 250px;
   background: radial-gradient(#666 33%, #555 55%, #333 99%);
   background-size: 100% 800px;
   background-position: center bottom;
   background-repeat: no-repeat;
-
-  height: 250px;
 }
 
 a {
@@ -14,4 +13,14 @@ a {
   font-family: "Gill Sans", sans-serif;
   font-weight: 700;
   color: #fff;
+}
+
+nav a {
+  font-size: 1.2rem;
+}
+
+.nav-container {
+  max-width: 1100px;
+  min-width: 600px;
+  margin: 40px auto;
 }

@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <nav className="flex">
-    <Link to="/">DashBoard</Link>
-    <Link to="/about">About</Link>
+    <div className="nav-container">
+      <Link to="/">DashBoard</Link>
+      <Link to="/about">About</Link>
+    </div>
   </nav>
 );
 
