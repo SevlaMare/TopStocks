@@ -11,17 +11,16 @@ function Detail() {
     <div>
       { find.map(data => {
         return (
-          <div>
+          <div className="detail">
             <h3 className="title">{stockId}</h3>
-            <p> Company: {stockId} </p>
 
             { data.historical.map(item => {
               return (
-                <div>
-                  <p> Day {item.date} </p>
+                <div className='stock-day'>
+                  <p> Date {item.date} </p>
                   <p> Change {item.changePercent.toFixed(2)} % </p>
-                  <p> Open  {item.open.toFixed(2)} </p>
-                  <p> Close {item.close.toFixed(2)} </p>
+                  <p> Open  {item.open.toFixed(2)} USD</p>
+                  <p> Close {item.close.toFixed(2)} USD</p>
                 </div>
               )
             })}

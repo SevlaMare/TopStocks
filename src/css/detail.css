@@ -1,5 +1,17 @@
 .detail {
-  padding: 15px;
+  margin: 45px auto;
+  padding: 25px;
+  width: 400px;
   border: 3px solid lightskyblue;
   border-radius: 5px;
+}
+
+.stock-day {
+  padding: 15px;
+  margin-bottom: 25px;
+  border: solid 1px lightgray;
+}
+
+.stock-day p {
+  font-size: 1.2rem;
 }
