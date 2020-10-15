@@ -11,11 +11,11 @@ it('accept valid props to render', () => {
   render(<Stock
     close={123}
     change={1.23}
-    link={<a href="#">abc</a>}
+    link={<a href="/detail/asd">abc</a>}
   />);
 });
 
 it('elements are embed correctly', () => {
-  render(<Stock close={123} change={1.23} link={<a href="#">AFK</a>} />);
+  render(<Stock close={123} change={1.23} link={<a href="/detail/MSFT">AFK</a>} />);
   expect(screen.getByText('AFK')).toBeInTheDocument();
 });

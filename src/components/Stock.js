@@ -28,7 +28,7 @@ const Stock = props => {
 Stock.propTypes = {
   close: PropTypes.number.isRequired,
   change: PropTypes.number.isRequired,
-  link: PropTypes.object.isRequired,
+  link: PropTypes.node.isRequired,
 };
 
 export default Stock;
