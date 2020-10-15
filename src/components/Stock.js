@@ -6,8 +6,20 @@ const Stock = props => {
 
   return (
     <div className="stock">
-      <h2> {change.toFixed(2)} % </h2>
-      <p> {close.toFixed(2)} USD </p>
+      <h2>
+        {' '}
+        {change.toFixed(2)}
+        {' '}
+        %
+        {' '}
+      </h2>
+      <p>
+        {' '}
+        {close.toFixed(2)}
+        {' '}
+        USD
+        {' '}
+      </p>
       {link}
     </div>
   );

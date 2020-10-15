@@ -1,7 +1,6 @@
 .content {
   display: flex;
   justify-content: space-between;
-
   margin-top: -75px;
   border: 15px solid #fff;
   border-radius: 8px;
@@ -15,7 +14,6 @@
 #dash-right {
   max-width: 200px;
 }
-
 
 #dash {
   display: flex;

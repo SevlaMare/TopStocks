@@ -62,10 +62,30 @@ module.exports = {
         },
       },
 
-      // CSS LOADER + split plug
+      // CSS LOADER global
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ],
+        exclude: /\.module\.css$/
+      },
+
+      // CSS LOADER modules
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          }
+        ],
+        include: /\.module\.css$/
       },
 
       // SASS LOADER

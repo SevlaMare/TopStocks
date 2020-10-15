@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import regeneratorRuntime from 'regenerator-runtime';
+/* eslint-enable no-unused-vars */
 
 import STOCKS_LIST from './constants';
 

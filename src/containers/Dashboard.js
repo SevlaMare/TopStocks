@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+
+/* eslint-disable no-unused-vars */
 import regeneratorRuntime from 'regenerator-runtime';
+/* eslint-enable no-unused-vars */
 
 import Stock from '../components/Stock';
 import CategoryFilter from '../components/Filter';
