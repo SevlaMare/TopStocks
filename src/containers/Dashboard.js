@@ -9,7 +9,7 @@ import regeneratorRuntime from 'regenerator-runtime';
 import Stock from '../components/Stock';
 import CategoryFilter from '../components/Filter';
 
-import { STORE_DATA, FILTER_DATA } from '../store/actions/index';
+import { STORE_DATA, FILTER_DATA, FILTER_RESET } from '../store/actions/index';
 import getData from '../connector';
 
 function Dashboard() {
@@ -19,6 +19,8 @@ function Dashboard() {
     getData().then(data => {
       dispatch(STORE_DATA(data.historicalStockList));
     });
+
+    dispatch(FILTER_RESET())
   }, []);
 
   const data = useSelector(state => state.dataR

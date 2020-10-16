@@ -6,4 +6,8 @@ const FILTER_DATA = category => (
   { type: 'FILTER_DATA', filtered: category }
 );
 
-export { STORE_DATA, FILTER_DATA };
+const FILTER_RESET = () => (
+  { type: 'FILTER_RESET', filtered: '' }
+);
+
+export { STORE_DATA, FILTER_DATA, FILTER_RESET };
