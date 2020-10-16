@@ -99,4 +99,5 @@ A special thanks for the code reviewers.
 - Linkedin: [SevlaMare](https://www.linkedin.com/in/sevla-mare)
 
 ## License
-<strong>MIT</strong>
+Design idea based on Catalogue of Dog Clothes by [Denys Chagaida on Behance](https://www.behance.net/chagaida)
+#### MIT
