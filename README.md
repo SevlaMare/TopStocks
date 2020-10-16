@@ -18,7 +18,7 @@
 
 ## Live Demo
 You can access a online version at:<br>
-https://stock-catalog.netlify.app/
+https://stock-catalogue.herokuapp.com/
 
 ## Requirements
 - [x] Implement a catalog with React and Redux
