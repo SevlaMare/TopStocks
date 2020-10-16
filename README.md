@@ -3,12 +3,9 @@
 
 ![screenshot](doc/screenshot.png)
 
-<br>This project was made to learn how to work with React,
-create components (Functional and class), manage state, use props, do prop-drilling,
-use event handlers and do runtime type check with PropTypes.<br>
+<br>This project was made to practice all aspects involved in creating a React application.<br>
 
 ## Content
-
 * [Live Demo](#live-demo)
 * [Requirements](#requirements)
 * [Requisites](#built-with)
@@ -22,12 +19,14 @@ use event handlers and do runtime type check with PropTypes.<br>
 
 ## Live Demo
 You can access a online version at:<br>
-https://reactive-calculator.herokuapp.com/
+https://stock-catalog.netlify.app/
 
 ## Requirements
-- [x] Setup workflow
-- [x] Implement a calculator using React
-- [x] Deploy on Heroku (Without create-react-app)
+- [x] Implement a catalog with React and Redux
+- [x] Setup workflow (Without create-react-app)
+- [x] Fetch data from API and store into Redux
+- [x] It should have routes and a filter to slice the data
+- [x] Deploy it live
 
 ## Requisites
 * [A modern web browser](https://www.google.com/chrome/)
@@ -35,15 +34,15 @@ https://reactive-calculator.herokuapp.com/
 * [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 ## Built With
-
-- React JS <br>
-- Express JS <br>
 - Javascript <br>
 - HTML/CSS <br>
+- React and Redux <br>
+- Express <br>
 - Webpack and babel <br>
-- JEST for tests <br>
+- JEST and React testing library for tests <br>
 - ESlint and Stylelint (Linters) <br>
 - GitHub Actions (CI Tool) <br>
+- Netlify (Server and CD tool) <br>
 - Git, Github and VScode <br>
 
 ## Getting Start
@@ -51,7 +50,7 @@ https://reactive-calculator.herokuapp.com/
 #### Get a local copy
 Now you need a copy of this application, if you are using Git:
 ```js
-git clone git@github.com:SevlaMare/reactiveCalculator.git
+git clone git@github.com:SevlaMare/Catalogue.git
 ```
 Otherwise just hit (Download Zip) on green button (Code) at top of this page.
 
