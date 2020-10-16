@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 function Detail() {
   const { stockId } = useParams(); // get end of url
   const data = useSelector(state => state.dataR); // map state
-  const find = data.base.filter(element => element.symbol === stockId);
+  const find = data.filter(element => element.symbol === stockId);
 
   return (
     <div key="idj89qwej913j">
