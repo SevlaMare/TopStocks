@@ -10,10 +10,9 @@
 * [Requirements](#requirements)
 * [Requisites](#built-with)
 * [Built With](#built-with)
-* [Game Design](#game-design)
+* [Future Improvements](#future-improvements)
 * [Getting Start](#getting-start)
 * [Contributing](#contributing)
-* [Acknowledgments](#acknowledgments)
 * [Author](#author)
 * [License](#license)
 
@@ -44,6 +43,11 @@ https://stock-catalog.netlify.app/
 - GitHub Actions (CI Tool) <br>
 - Netlify (Server and CD tool) <br>
 - Git, Github and VScode <br>
+
+## Future Improvements
+- Realtime chart from state
+- More filters
+- Loading animation while fetch
 
 ## Getting Start
 
@@ -77,13 +81,13 @@ yarn go
 localhost:7000
 ```
 
-### Contributing
+## Contributing
 
 Contributions, issues and feature requests are welcome!
 
 You can do it on [issues page](issues/).
 
-## Acknowledgments
+### Acknowledgments
 
 A special thanks for the code reviewers.
 
@@ -95,5 +99,5 @@ A special thanks for the code reviewers.
 - Twitter: [#SevlaMare](https://twitter.com/SevlaMare)
 - Linkedin: [SevlaMare](https://www.linkedin.com/in/sevla-mare)
 
-### License
+## License
 <strong>MIT</strong>
