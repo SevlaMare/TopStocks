@@ -24,7 +24,9 @@ https://stock-catalog.netlify.app/
 - [x] Implement a catalog with React and Redux
 - [x] Setup workflow (Without create-react-app)
 - [x] Fetch data from API and store into Redux
-- [x] It should have routes and a filter to slice the data
+- [x] It should have routes and nested routes
+- [x] Stateless filter to slice the data
+- [x] Make use of Hooks, and only funcitonal components
 - [x] Deploy it live
 
 ## Requisites
