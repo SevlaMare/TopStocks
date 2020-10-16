@@ -20,7 +20,7 @@ function Dashboard() {
       dispatch(STORE_DATA(data.historicalStockList));
     });
 
-    dispatch(FILTER_RESET())
+    dispatch(FILTER_RESET());
   }, []);
 
   const data = useSelector(state => state.dataR
