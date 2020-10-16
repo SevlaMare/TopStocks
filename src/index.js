@@ -11,9 +11,3 @@ import './css/detail.css';
 import './css/dash.css';
 
 ReactDOM.render(<App />, document.querySelector('#app'));
-
-// import getData from './connector';
-// getData()
-//   .then((data) => {
-//     console.log('conn check', data)
-//   })

@@ -13,23 +13,21 @@ import { STORE_DATA, FILTER_DATA } from '../store/actions/index';
 import getData from '../connector';
 
 function Dashboard() {
-  const data = useSelector(state => state.dataR.base
-    .filter(item => item.symbol === (state.filterR || item.symbol))); // map state
-
   const dispatch = useDispatch(); // map dispatch
+
+  useEffect(() => {
+    getData().then(data => {
+      dispatch(STORE_DATA(data.historicalStockList));
+    });
+  }, []);
+
+  const data = useSelector(state => state.dataR
+    .filter(item => item.symbol === (state.filterR || item.symbol))); // map state
 
   const handleFilterChange = event => dispatch(FILTER_DATA(event.target.value));
 
-  useEffect(() => {
-    if (data.length === 0) {
-      getData().then(data => {
-        dispatch(STORE_DATA(data.historicalStockList));
-      });
-    }
-  }, []);
-
   const renderData = () => {
-    if (data.length > 0) {
+    if (data && data.length > 0) {
       return (
         data.map(data => (
           <>
