@@ -30,7 +30,6 @@ https://stock-catalog.netlify.app/
 ## Requisites
 * [A modern web browser](https://www.google.com/chrome/)
 * [Node JS](https://nodejs.org/en/download/)
-* [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 ## Built With
 - Javascript <br>
@@ -68,12 +67,12 @@ npm install
 
 #### Compile
 ```js
-yarn build
+npm run build
 ```
 
 #### Start the server
 ```js
-yarn go
+npm run go
 ```
 
 #### Go to a web browser (Like Google Chrome) and visit:
