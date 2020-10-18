@@ -8,7 +8,7 @@ function Detail() {
   const find = data.filter(element => element.symbol === stockId);
 
   return (
-    <div key="idj89qwej913j">
+    <div>
       { find.map(data => (
         <div className="detail" key={data.id}>
           <h3 className="title">{stockId}</h3>
