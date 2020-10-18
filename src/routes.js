@@ -11,9 +11,9 @@ const Routes = () => (
     <Navbar />
 
     <Switch>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/about" component={About} />
       <Route path="/detail/:stockId" component={Detail} />
+      <Route path="/about" component={About} />
+      <Route path="/" component={Dashboard} />
     </Switch>
   </BrowserRouter>
 );

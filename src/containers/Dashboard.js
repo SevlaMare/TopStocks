@@ -32,15 +32,13 @@ function Dashboard() {
     if (data && data.length > 0) {
       return (
         data.map(data => (
-          <>
-            <Stock
-              key={data.id}
-              title={data.symbol}
-              close={data.historical[0].close}
-              change={data.historical[0].changePercent}
-              link={<Link to={`detail/${data.symbol}`}>{data.symbol}</Link>}
-            />
-          </>
+          <Stock
+            key={data.symbol}
+            title={data.symbol}
+            close={data.historical[0].close}
+            change={data.historical[0].changePercent}
+            link={<Link to={`detail/${data.symbol}`}>{data.symbol}</Link>}
+          />
         ))
       );
     }

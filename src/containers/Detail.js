@@ -10,34 +10,32 @@ function Detail() {
   return (
     <div>
       { find.map(data => (
-        <div className="detail" key={data.id}>
+        <div className="detail" key={data.symbol}>
           <h3 className="title">{stockId}</h3>
 
           { data.historical.map(item => (
-            <div className="stock-day" key={item.id}>
+            <div className="stock-day" key={item.changeOverTime}>
               <p>
-                {' '}
                 Date
+                {' '}
                 {item.date}
               </p>
               <p>
-                {' '}
                 Change
+                {' '}
                 {item.changePercent.toFixed(2)}
-                {' '}
                 %
-                {' '}
               </p>
               <p>
-                {' '}
                 Open
+                {' '}
                 {item.open.toFixed(2)}
                 {' '}
                 USD
               </p>
               <p>
-                {' '}
                 Close
+                {' '}
                 {item.close.toFixed(2)}
                 {' '}
                 USD
