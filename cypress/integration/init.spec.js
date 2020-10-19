@@ -1,5 +1,5 @@
 describe('Cypress', () => {
-  it('setup and running', () => {
+  it('setup', () => {
     expect(true).to.equal(true)
   })
 })

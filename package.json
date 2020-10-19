@@ -17,7 +17,7 @@
     "start": "node server.js",
     "heroku-postbuild": "webpack --mode development",
     "e2e": "cypress run",
-    "e2e crome": "cypress run -browser chrome",
+    "cypress crome": "cypress run -browser chrome",
     "cypress": "cypress open"
   },
   "repository": {
