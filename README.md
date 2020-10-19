@@ -82,6 +82,16 @@ npm run go
 localhost:7000
 ```
 
+#### Run tests
+Unit and integration tests
+```npm run test```
+
+E2E, first, need the app running:
+```npm run build```
+```npm run go```
+and so run tests
+```npm run e2e```
+
 ## Contributing
 
 Contributions, issues and feature requests are welcome!
