@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 /* eslint-enable no-unused-vars */
 
-import App from '../src/components/About';
+import App from '../src/App';
 
-it('render start app', () => {
-  render(<App />);
+describe('Start app', () => {
+  it('Routes, provider and entry points are correcly setup', () => {
+    render(<App />);
+  });
 });

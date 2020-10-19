@@ -15,7 +15,10 @@
     "eslint2": "npx eslint ./test/*.js",
     "test": "jest",
     "start": "node server.js",
-    "heroku-postbuild": "webpack --mode development"
+    "heroku-postbuild": "webpack --mode development",
+    "e2e": "cypress run",
+    "e2e crome": "cypress run -browser chrome",
+    "cypress": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -58,7 +61,8 @@
     "stylelint-scss": "^3.17.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "cypress": "^5.4.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
