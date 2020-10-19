@@ -17,3 +17,10 @@ a {
 ul {
   list-style-type: none;
 }
+
+#error {
+  width: 100%;
+  margin: 40px;
+  float: left;
+  color: #cd6667;
+}

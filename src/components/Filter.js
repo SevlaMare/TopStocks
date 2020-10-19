@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import STOCKS_LIST from '../constants';
+import STOCKS_LIST from '../helpers/constants';
 
 const CATEGORIES = Object.keys(STOCKS_LIST).sort();
 

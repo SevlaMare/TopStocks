@@ -9,16 +9,19 @@ import regeneratorRuntime from 'regenerator-runtime';
 import Stock from '../components/Stock';
 import CategoryFilter from '../components/Filter';
 
-import { STORE_DATA, FILTER_DATA, FILTER_RESET } from '../store/actions/index';
-import getData from '../connector';
+import { STORE_DATA, FILTER_DATA, FILTER_RESET } from '../store/actions/actions';
+import getData from '../helpers/connector';
+import displayError from '../helpers/errorMsg';
 
 function Dashboard() {
   const dispatch = useDispatch(); // map dispatch
 
   useEffect(() => {
-    getData().then(data => {
-      dispatch(STORE_DATA(data.historicalStockList));
-    });
+    getData()
+      .then(data => {
+        dispatch(STORE_DATA(data.historicalStockList));
+      })
+      .catch(err => displayError("Can't connect to the API. Try late."));
 
     dispatch(FILTER_RESET());
   }, []);
@@ -47,6 +50,8 @@ function Dashboard() {
   };
 
   return (
+    <>
+    <div id='error' />
     <main>
       <article className="content">
         <section id="dash-left">
@@ -62,6 +67,7 @@ function Dashboard() {
         </section>
       </article>
     </main>
+    </>
   );
 }
 

@@ -18,6 +18,8 @@ const getData = async () => {
     },
   });
 
+  if (response.status === 400) { throw new Error('Bad request.'); }
+
   return response.json();
 };
 
