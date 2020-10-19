@@ -21,7 +21,7 @@ function Dashboard() {
       .then(data => {
         dispatch(STORE_DATA(data.historicalStockList));
       })
-      .catch(err => displayError("Can't connect to the API. Try late."));
+      .catch(() => displayError("Can't connect to the API. Try late."));
 
     dispatch(FILTER_RESET());
   }, []);
@@ -51,22 +51,22 @@ function Dashboard() {
 
   return (
     <>
-    <div id='error' />
-    <main>
-      <article className="content">
-        <section id="dash-left">
-          <h2 className="title">DASHBOARD</h2>
-          <div id="dash">
-            { renderData() }
-          </div>
-        </section>
+      <div id="error" />
+      <main>
+        <article className="content">
+          <section id="dash-left">
+            <h2 className="title">DASHBOARD</h2>
+            <div id="dash">
+              { renderData() }
+            </div>
+          </section>
 
-        <section id="dash-right">
-          <h2 className="title">OPTIONS</h2>
-          <CategoryFilter filterCategory={handleFilterChange} />
-        </section>
-      </article>
-    </main>
+          <section id="dash-right">
+            <h2 className="title">OPTIONS</h2>
+            <CategoryFilter filterCategory={handleFilterChange} />
+          </section>
+        </article>
+      </main>
     </>
   );
 }
