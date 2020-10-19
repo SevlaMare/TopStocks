@@ -13,7 +13,7 @@
     "lint": "npx eslint ./*.js",
     "eslint": "npx eslint ./src/**/*.js",
     "eslint2": "npx eslint ./test/*.js",
-    "test": "jest",
+    "test": "jest test",
     "start": "node server.js",
     "heroku-postbuild": "webpack --mode development",
     "e2e": "cypress run",
