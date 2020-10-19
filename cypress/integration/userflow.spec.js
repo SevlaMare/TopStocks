@@ -1,13 +1,13 @@
 describe('Form', () => {
-  // beforeEach(() => {
-  //   cy.visit('/')
-  // })
-
-  it('visits the app', () => {
+  beforeEach(() => {
     cy.visit('/')
   })
 
-  // it('it focuses the input', () => {
-  //   cy.focused().should('have.class', 'form-control')
-  // })
+  it('render stocks form dashboard', () => {
+    cy.get('.stock')
+  })
+
+  it('have filter for categories', () => {
+    cy.get('#dash-right')
+  })
 })

@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "stocks",
   "version": "1.0.0",
-  "description": "",
+  "description": "> A calogue build with React and Redux.",
   "main": "index.js",
   "scripts": {
     "babel": "babel src -d dist",
@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SevlaMare/getStartReact.git"
+    "url": "git+https://github.com/SevlaMare/Catalogue.git"
   },
   "author": "Thiago Miranda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SevlaMare/getStartReact/issues"
+    "url": "https://github.com/SevlaMare/Catalogue/issues"
   },
-  "homepage": "https://github.com/SevlaMare/getStartReact#readme",
+  "homepage": "https://github.com/SevlaMare/Catalogue#readme",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
@@ -80,5 +80,9 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     }
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
   }
 }
