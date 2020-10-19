@@ -20,6 +20,9 @@
 You can access a online version at:<br>
 https://stock-catalogue.herokuapp.com/
 
+And video presentation:
+https://www.youtube.com/watch?v=hBO2cOWX7-w
+
 ## Requirements
 - [x] Implement a catalog with React and Redux
 - [x] Setup workflow (Without create-react-app)
