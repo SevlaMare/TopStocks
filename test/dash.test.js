@@ -8,13 +8,12 @@ import { render, screen } from '@testing-library/react';
 import App from '../src/App';
 import Dashboard from '../src/containers/Dashboard';
 
-
 describe('Render', () => {
   it('Display home page', () => {
     render(
       <App>
         <Dashboard />
-      </App>
+      </App>,
     );
 
     expect(screen.getByText('EBAY')).toBeInTheDocument();
