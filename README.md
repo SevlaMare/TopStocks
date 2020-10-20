@@ -43,6 +43,7 @@ https://www.youtube.com/watch?v=hBO2cOWX7-w
 - Express <br>
 - Webpack and babel <br>
 - JEST and React testing library for tests <br>
+- Cypress for e2e tests <br>
 - ESlint and Stylelint (Linters) <br>
 - GitHub Actions (CI Tool) <br>
 - Netlify (Server and CD tool) <br>
