@@ -1,5 +1,5 @@
-# React Catalogue
-> A calogue build with React and Redux.
+# Top Stocks
+> A catalog like build with React and Redux, to display the top stocks from NASDAQ.
 
 ![screenshot](doc/screenshot.png)
 
