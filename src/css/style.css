@@ -1,4 +1,26 @@
-body {
+.flex { display: flex; }
+
+* {
   margin: 0;
   padding: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#error {
+  width: 100%;
+  margin: 40px;
+  float: left;
+  color: #cd6667;
 }

@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "stocks",
   "version": "1.0.0",
-  "description": "",
+  "description": "> A calogue build with React and Redux.",
   "main": "index.js",
   "scripts": {
     "babel": "babel src -d dist",
@@ -13,25 +13,30 @@
     "lint": "npx eslint ./*.js",
     "eslint": "npx eslint ./src/**/*.js",
     "eslint2": "npx eslint ./test/*.js",
-    "test": "jest",
+    "test": "jest test",
     "start": "node server.js",
-    "heroku-postbuild": "webpack --mode development"
+    "heroku-postbuild": "webpack --mode development",
+    "e2e": "cypress run",
+    "cypress crome": "cypress run -browser chrome",
+    "cypress": "cypress open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SevlaMare/getStartReact.git"
+    "url": "git+https://github.com/SevlaMare/Catalogue.git"
   },
   "author": "Thiago Miranda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SevlaMare/getStartReact/issues"
+    "url": "https://github.com/SevlaMare/Catalogue/issues"
   },
-  "homepage": "https://github.com/SevlaMare/getStartReact#readme",
+  "homepage": "https://github.com/SevlaMare/Catalogue#readme",
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.1.0",
     "css-loader": "^4.3.0",
@@ -45,6 +50,7 @@
     "file-loader": "^6.1.0",
     "html-loader": "^1.3.0",
     "html-webpack-plugin": "^4.4.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
     "mini-css-extract-plugin": "^0.11.2",
     "sass": "^1.26.10",
@@ -55,15 +61,28 @@
     "stylelint-scss": "^3.17.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "cypress": "^5.4.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "big-js": "^3.1.3",
-    "big.js": "^5.2.2",
     "express": "^4.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
   }
 }
