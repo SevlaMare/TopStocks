@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -75px;
+  border: 15px solid #fff;
+  border-radius: 8px;
+  background: #fff;
+}
+
+#dash-left {
+  max-width: 600px;
+}
+
+#dash-right {
+  max-width: 200px;
+}
+
+#dash {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin-bottom: 20px;
+  padding: 8px 10px;
+  width: fit-content;
+  color: #fff;
+  background: #669acc;
+}
