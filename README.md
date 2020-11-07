@@ -17,7 +17,7 @@
 * [License](#license)
 
 ## Live Demo
-You can access a online version at:<br>
+You can access an online version at:<br>
 https://stock-catalogue.herokuapp.com/
 
 And video presentation:
@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=hBO2cOWX7-w
 - [x] Fetch data from API and store into Redux
 - [x] It should have routes and nested routes
 - [x] Stateless filter to slice the data
-- [x] Make use of Hooks, and only funcitonal components
+- [x] Make use of Hooks and only functional components
 - [x] Deploy it live
 
 ## Requisites
@@ -52,7 +52,7 @@ https://www.youtube.com/watch?v=hBO2cOWX7-w
 ## Future Improvements
 - Realtime chart from state
 - More filters
-- Loading animation while fetch
+- Loading animation while fetching
 
 ## Getting Start
 
@@ -61,7 +61,7 @@ Now you need a copy of this application, if you are using Git:
 ```js
 git clone git@github.com:SevlaMare/Catalogue.git
 ```
-Otherwise just hit (Download Zip) on green button (Code) at top of this page.
+Otherwise just hit (Download Zip) on the green button (Code) at top of this page.
 
 #### Open terminal
 Open your terminal inside the game folder, and paste the following commands:
@@ -104,7 +104,7 @@ You can do it on [issues page](issues/).
 
 ### Acknowledgments
 
-A special thanks for the code reviewers.
+A special thanks to the code reviewers.
 
 ## Author
 
